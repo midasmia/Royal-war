@@ -1,0 +1,219 @@
+html {
+    font-size: 20px;
+    background-color: #F0F2F2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*导航条背景及排列样式设置*/
+nav{
+    background: #488bf4;
+    height:3.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .logo{}
+
+/*logo的位置*/
+    .logo img{
+        width: 5rem;
+        transform: translateY(1.5rem);
+        transition: all 0.3s ease;
+    }
+
+/*联系我们的布局*/
+    .contact-us{
+        width: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 1rem;
+    }
+
+/*联系我们中的文字设置*/
+    .contact-us p{
+        font-size: 0.7rem;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+/*联系我们中的图片设置*/
+    .contact-us img{
+        display: none;
+    }
+
+/*菜单按钮打开的布局设置*/
+    .select-bar {
+        width: 5rem;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+/*菜单按钮图片的样式*/
+    .select-bar img{
+        width:1rem;
+    }
+
+/*菜单栏本来的背景，填充度*/
+    .menu {
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 0.8;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 110vw;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.3s ease;
+        
+    }
+
+/*设置为点击时打开的样式*/
+    .menu-active{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.9;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.5s ease;
+    }
+
+/*菜单栏中的logo位置，样式*/
+    .menu-logo {
+        width: 5rem;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0.8rem;
+    }
+
+/*菜单栏中的关闭图标位置，样式*/
+    .menu-x{
+        width:1rem;
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+    }
+/*菜单栏中的文字信息样式*/
+    .menu-info1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+
+    .menu-info1 li{
+        list-style: none;
+        width: 80%;
+        border-bottom: 1px solid #353535;
+        padding: 1rem 0;
+    }
+
+    .menu-info1 li:first-child{
+        border-top: 1px solid #353535;
+    }
+
+    .menu-info1 li a{
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .menu-info2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .menu-info2 li{
+        list-style: none;
+        width: 80%;
+        padding: 0.5rem 0;
+    }
+
+    .menu-info2 li a{
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    .menu-info3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+
+    .menu-info3 li{
+        list-style: none;
+        width:80%;
+        padding: 0.5rem 0;
+    }
+
+    .menu-info3 li img{
+        width: 7rem;
+    }
+
+/*屏幕大于640px时的显示样式*/
+@media screen and (min-width: 640px) {
+    .logo{}
+
+    .logo img{
+        width: 10rem;
+        transform: translateY(1.5rem);
+        transition: all 0.3s ease;
+    }
+
+    .contact-us{
+        width: 10rem;
+    }
+    .contact-us p{
+        font-weight: bold;
+    }
+
+    .contact-us img{
+        width: 1.2rem;
+        height: 1.2rem;
+        padding-left: 0.5rem;
+        transition: all 0.3s ease;
+        display: block;
+    }
+
+    .contact-us img:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .select-bar {
+        width: 8rem;
+    }
+
+    .select-bar img{
+        width:1.8rem;
+        
+    }
+
+    .menu-active{
+        width: 30%;
+    }
+}
+
